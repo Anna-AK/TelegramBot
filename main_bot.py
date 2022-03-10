@@ -34,6 +34,7 @@ def converter(message: telebot.types.Message):
 
     except Exception as e:
         bot.reply_to(message, f'Не удалось обработать команду{e}')
+        
     else:
         text = f'На данный момент цена {quote} в {base} = {price} \nСтоимость {amount} {quote} = {total} {base}'
         bot.send_message(message.chat.id, text)
