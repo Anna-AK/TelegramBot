@@ -27,7 +27,6 @@ class CriptoConverter:
         except ValueError:
             raise APIException(f'Не удалось обработать {amount}')
 
-
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={val_quote}&tsyms={val_base}')
         price = json.loads(r.content)[val_base]
         total = float(price * amount)
