@@ -31,4 +31,3 @@ class CriptoConverter:
         price = json.loads(r.content)[val_base]
         total = float(price * amount)
         return total, price
-
