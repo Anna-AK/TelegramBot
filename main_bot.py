@@ -7,7 +7,7 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start','help'])
 def help(message: telebot.types.Message):
     text = "Чтобы сделать расчет конвертации, введите названия валют в следующем виде: \n " \
-           "<что имеем>  <во что переводим>  <сколько имеем>. \n" \
+           "<что имеем>  <во что переводим>  <сколько хотим взять>. \n" \
            "Например: евро биткоин 3\n\n Список доступных для расчета валют можно увидеть по /valeus"
     bot.reply_to(message, text)
 
